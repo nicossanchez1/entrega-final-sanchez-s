@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 let stockProductos = [
-    {id: 1, nombre: "Castrol", tipo: "aceite", cantidad: 1, desc: "Maximo rendimiento", precio: 1200, img: '../img/castrol-edge.jpg'},
-    {id: 2, nombre: "Pennzoil", tipo: "aceite", cantidad: 1, desc: "Maxima calidad", precio: 1100, img: '../img/penzoil.jpg'},
-    {id: 3, nombre: "Liqui Moly", tipo: "aceite", cantidad: 1, desc: "precio y calidad", precio: 1200, img: '../img/liquimoly.jpg'},
-    {id: 4, nombre: "Edge", tipo: "aceite", cantidad: 1, desc: "Excelente producto", precio: 1400, img: '../img/hidraulica.jpg'},
-    {id: 5, nombre: "Amortiguador", tipo: "aceite", cantidad: 1, desc: "Maximo rendimiento", precio: 1200, img: '../img/amortig.jpg'},
-    {id: 6, nombre: "Kit de filtros", tipo: "aceite", cantidad: 1, desc: "Maxima calidad", precio: 1100, img: '../img/man.jpg'},
-    {id: 7, nombre: "Disco de freno", tipo: "aceite", cantidad: 1, desc: "precio y calidad", precio: 1200, img: '../img/disco.jpg'},
-    {id: 8, nombre: "Bujia", tipo: "aceite", cantidad: 1, desc: "Excelente producto", precio: 1400, img: '../img/bujia.jpg'},
+    {id: 1, nombre: "Castrol", tipo: "aceite", cantidad: 1, desc: "Maximo rendimiento", precio: 1200, img: './img/castrol-edge.jpg'},
+    {id: 2, nombre: "Pennzoil", tipo: "aceite", cantidad: 1, desc: "Maxima calidad", precio: 1100, img: './img/penzoil.jpg'},
+    {id: 3, nombre: "Liqui Moly", tipo: "aceite", cantidad: 1, desc: "precio y calidad", precio: 1200, img: './img/liquimoly.jpg'},
+    {id: 4, nombre: "Edge", tipo: "aceite", cantidad: 1, desc: "Excelente producto", precio: 1400, img: './img/hidraulica.jpg'},
+    {id: 5, nombre: "Amortiguador", tipo: "aceite", cantidad: 1, desc: "Maximo rendimiento", precio: 1200, img: './img/amortig.jpg'},
+    {id: 6, nombre: "Kit de filtros", tipo: "aceite", cantidad: 1, desc: "Maxima calidad", precio: 1100, img: './img/man.jpg'},
+    {id: 7, nombre: "Disco de freno", tipo: "aceite", cantidad: 1, desc: "precio y calidad", precio: 1200, img: './img/disco.jpg'},
+    {id: 8, nombre: "Bujia", tipo: "aceite", cantidad: 1, desc: "Excelente producto", precio: 1400, img: './img/bujia.jpg'},
     ]
 
     botonVaciar.addEventListener('click', () => {
@@ -79,4 +79,4 @@ const carritoRefresh = () => {
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
 }
 
-///
+//
