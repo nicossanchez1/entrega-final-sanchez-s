@@ -21,7 +21,6 @@ let stockProductos = [
     {id: 8, nombre: "Bujia", tipo: "aceite", cantidad: 1, desc: "Excelente producto", precio: 1400, img: './img/bujia.jpg'},
     ]
 
-
 stockProductos.forEach((producto) => {
     const div = document.createElement('div')
     div.classList.add('producto')
@@ -64,17 +63,6 @@ botonVaciar.addEventListener('click', () => {
     carritoRefresh()
 })
 
-
-
-// const eliminarDelCarrito = (prodId) => {
-//     const item = carrito.find((prod) => prod.id === prodId)
-//     const indice = carrito.indexOf(item) 
-//     carrito.splice(indice, 1);
-//     carritoRefresh() 
-//     console.log(carrito)
-// }
-
-
 const carritoRefresh = () => {
     contenedorCarrito.innerHTML = "" 
     carrito.forEach((prod) => {
@@ -92,9 +80,4 @@ const carritoRefresh = () => {
     contadorCarrito.innerText = carrito.length 
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
 }
-
-
-
-
-
 //
