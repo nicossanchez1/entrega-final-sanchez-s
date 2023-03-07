@@ -21,10 +21,6 @@ let stockProductos = [
     {id: 8, nombre: "Bujia", tipo: "aceite", cantidad: 1, desc: "Excelente producto", precio: 1400, img: './img/bujia.jpg'},
     ]
 
-    botonVaciar.addEventListener('click', () => {
-        carrito.length = 0
-        carritoRefresh()
-    })
 
 stockProductos.forEach((producto) => {
     const div = document.createElement('div')
@@ -54,12 +50,30 @@ const agregarAlCarrito = (prodId) => {
 }
 
 const eliminarDelCarrito = (prodId) => {
-    const item = carrito.find((prod) => prod.id === prodId)
-    const indice = carrito.indexOf(item) 
+    const indice = carrito.findIndex((prod) => prod.id === prodId)
+    console.log(indice);
     carrito.splice(indice, 1)  
-    carritoRefresh() 
+    localStorage.setItem('carrito', JSON.stringify(carrito))
     console.log(carrito)
+    carritoRefresh()
 }
+
+botonVaciar.addEventListener('click', () => {
+    carrito.length = 0;
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    carritoRefresh()
+})
+
+
+
+// const eliminarDelCarrito = (prodId) => {
+//     const item = carrito.find((prod) => prod.id === prodId)
+//     const indice = carrito.indexOf(item) 
+//     carrito.splice(indice, 1);
+//     carritoRefresh() 
+//     console.log(carrito)
+// }
+
 
 const carritoRefresh = () => {
     contenedorCarrito.innerHTML = "" 
@@ -78,5 +92,9 @@ const carritoRefresh = () => {
     contadorCarrito.innerText = carrito.length 
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
 }
+
+
+
+
 
 //
