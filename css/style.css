@@ -16,13 +16,18 @@ body {
 .daytona-logo {
   margin: 0 0 0 1rem;
   padding: 0;
+  min-width: 100%;
+  padding: ;
 }
+
 
 @media (max-width: 769px) {
   .daytona-logo {
-    margin: 0 0 0 6rem;
+    margin: 0 0 0 0rem;
     padding: 0;
   }
+  
+  
 }
 
 .donde_encontrarnos {
@@ -318,6 +323,7 @@ p {
   transition: transform 400ms ease-out;
 }
 
+
 .gallery-image:hover {
   transform: scale(1.15);
 }
@@ -392,7 +398,7 @@ color: #f3d139;
 
 .navbar-toggler {
   border: 1.9px solid black;
-  margin: 0 0.5rem 0 0;
+  margin: 0 0rem 0 0.5rem;
 }
 
 .insumos {
@@ -465,7 +471,7 @@ color: #f3d139;
   .repuestos,
   .intro-aceite,
   .navbar-nav .ubicacion,
-  .navinicial {
+  .navinicial, .zone {
     display: none;
   }
   .bienvenido {
@@ -495,6 +501,127 @@ color: #f3d139;
     margin: 1.2rem 0 0 0;
     padding: 0 0 0 0;
   }
+
+    #contenedor-productos {
+
+  margin: 0rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+  .productImage {
+    width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+    max-width: 170px;
+    min-width: 170px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .productoSell{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+.producto {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 1rem 0;
+  margin: 0px;
+  margin-bottom: 20px;
+  box-shadow: 2px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 3%;
+  overflow: hidden;
+}
+
+p {
+  line-height: 1;
+}
+
+  .boton-agregar {
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 3px;
+    width: 100%;
+    max-width: 90%;
+    border: none;
+    border-radius: 2rem;
+  }
+.boton-agregar:hover {
+  cursor: pointer;
+}
+.boton-agregar:focus {
+  outline: none;
+}
+
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-carrito {
+  position: relative;
+  background-color: white;
+  padding: 15px;
+  transition: all .5s;
+  overflow-y: scroll;
+  max-height: 70%;
+  margin: 0;
+  max-width: 99%;
+}
+
+
+.modal-active .modal-carrito {
+  margin-top: 0;
+}
+
+.modal-carrito h3 {
+  color: red;
+  padding-bottom: 5px;
+}
+.modal-carrito #carritoCerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: red;
+  border: none;
+  background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+  cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+  outline: none;
+}
+.modal-carrito .precioProducto {
+  padding-top: 10px;
+  
+}
+
 }
 
 @media (min-width: 768px) {
@@ -506,7 +633,7 @@ color: #f3d139;
   .neumaticos,
   .news,
   .donde_encontrarnos,
-  .inicio {
+  .inicio{
     visibility: hidden;
     display: none;
   }
@@ -557,7 +684,125 @@ color: #f3d139;
   .carouselPadre {
     display: contents;
   }
+  .productImage {
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    height: 100%;
+    min-width: 200px;
+    max-width: 200px;
+    overflow: hidden;
+  }
+
+  .productoSell{
+    display: flex;
+    flex-direction:column;
+
+  }
+
+  #contenedor-productos {
+
+    margin: 0rem;
+    padding: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 90%;
+  }
+  
+  p {
+    line-height: 1.8;
+  }
+  .producto {
+    max-width: 40%;
+    max-height: 100%;
+    padding: 1rem 0;
+    margin: 0px;
+    margin-bottom: 20px;
+    box-shadow: 2px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 3%;
+    overflow: hidden;
+  }
+  
+  .boton-agregar {
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 3px;
+    width: 100%;
+    max-width: 90%;
+    border: none;
+    border-radius: 2rem;
+  }
+  .boton-agregar:hover {
+    cursor: pointer;
+  }
+  .boton-agregar:focus {
+    outline: none;
+  }
+
+  .modal-contenedor {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .modal-active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .modal-carrito {
+    position: relative;
+    background-color: white;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+    overflow-y: scroll;
+    max-height: 600px;
+  }
+  
+  
+  .modal-active .modal-carrito {
+    margin-top: 0;
+  }
+  
+  .modal-carrito h3 {
+    color: red;
+    padding-bottom: 5px;
+  }
+  .modal-carrito #carritoCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: red;
+    border: none;
+    background-color: white;
+  }
+  .modal-carrito #carritoCerrar:hover {
+    cursor: pointer;
+  }
+  .modal-carrito #carritoCerrar:focus {
+    outline: none;
+  }
+  .modal-carrito .precioProducto {
+    padding-top: 10px;
+    
+  }
+
 }
+
 
 @media (min-width: 992px) {
   .widget-bar {
@@ -1353,118 +1598,32 @@ h1 {
   font-weight: 700;
   font-size: 50px;
 }
+
+
 #boton-carrito {
   border: none;
   color: black;
   font-size: 20px;
-  background-color: white;
-  border-radius: 50%;
+  background: none;
   padding: 5px 10px;
-  transition: all .3s;
 }
 #boton-carrito:hover {
   cursor: pointer;
   color: red;
   background-color: yellow;
+  border-radius: 10%;
 }
 #boton-carrito:focus {
   outline: none;
 }
 
-#contenedor-productos {
-  max-width: 1200px;
-  margin: 60px auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 
-p {
-  line-height: 1.8;
-}
-.producto {
-  max-width: 20%;
-  max-height: 100%;
-  padding: 10px;
-  margin: 10px;
-  margin-bottom: 20px;
-  box-shadow: 2px 1px 1px 1px rgba(0, 0, 0, 0.3);
-  border-radius: 3%;
-}
 .precioProducto {
   font-weight: 700;
 }
-.boton-agregar {
-  background-color: red;
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 5px;
-  border: none;
-  border-radius: 12%;
-}
-.boton-agregar:hover {
-  cursor: pointer;
-}
-.boton-agregar:focus {
-  outline: none;
-}
 
-.modal-contenedor {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all .5s;
-  opacity: 0;
-  visibility: hidden;
-}
 
-.modal-active {
-  opacity: 1;
-  visibility: visible;
-}
 
-.modal-carrito {
-  position: relative;
-  background-color: white;
-  min-width: 500px;
-  padding: 20px;
-  margin-top: -100%;
-  transition: all .5s;
-}
-
-.modal-active .modal-carrito {
-  margin-top: 0;
-}
-
-.modal-carrito h3 {
-  color: red;
-  padding-bottom: 5px;
-}
-.modal-carrito #carritoCerrar {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 20px;
-  color: red;
-  border: none;
-  background-color: white;
-}
-.modal-carrito #carritoCerrar:hover {
-  cursor: pointer;
-}
-.modal-carrito #carritoCerrar:focus {
-  outline: none;
-}
-.modal-carrito .precioProducto {
-  padding-top: 10px;
-  
-}
 
 .productoEnCarrito {
   border-left: 5px solid lightblue;
@@ -1492,3 +1651,4 @@ p {
 .boton-eliminar:focus {
   outline: none;
 }
+
